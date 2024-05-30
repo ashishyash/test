@@ -108,3 +108,9 @@ html,body{
         }
     } 
 }
+.footer_wrapper{
+@extend .header_wrapper;
+}
+.wrapper{
+  min-height: calc(100vh - 242px);
+}

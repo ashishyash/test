@@ -4,7 +4,7 @@ const Header = ()=> {
     return(
         <header className='header_wrapper'>
             <div className="logo">
-                <img src={logo} alt="logo"/>
+            <Link to='/'><img src={logo} alt="logo"/></Link>
             </div>
             <nav className="navigation">
                 <ul>

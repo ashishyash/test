@@ -5,7 +5,7 @@ const Footer = ()=> {
             <div className="logo">
                 <img src={logo} alt="logo"/>
             </div>
-            <nav className="footer_navigation">
+            <nav className="navigation">
                 <ul>
                     <li>Home</li>
                     <li>About Us</li>
@@ -17,5 +17,4 @@ const Footer = ()=> {
         </footer>
     )
 }
-
 export default Footer;

@@ -12,22 +12,18 @@ const Body = () => {
     useEffect(() => {
         fetchApiData();
     }, []);
-
-    console.log('Parent')
     return (
         <>
-                <div className="searchbox">
-                    <button type="button">Search</button>
-                </div>
-                <div className="card_parent">
-                    {
-                        cardData.map((data) => (
-                            <Card key={data.id} info={data} />
-                        ))
-                    }
-                </div>
-                <button className="" type="button" onClick={() => { setCount(count + 1) }}>Count ++</button>
-                <p>Count: {count}</p>
+            <div className="searchbox">
+                <button type="button">Search</button>
+            </div>
+            <div className="card_parent">
+                {
+                    cardData.map((data) => ( <Card key={data.id} info={data} />))
+                }
+            </div>
+            <button className="" type="button" onClick={() => { setCount(count + 1) }}>Count ++</button>
+            <p>Count: {count}</p>
         </>
     );
 }

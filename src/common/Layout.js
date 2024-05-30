@@ -6,11 +6,13 @@ const Layout = () => {
     return (
         <>
             <Header />
-            <Outlet />
+            <div className='wrapper'>
+                 <Outlet />
+            </div>
+           
             <Footer />
         </>
 
     )
 }
-
 export default Layout

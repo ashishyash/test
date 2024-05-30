@@ -1,8 +1,15 @@
 
-
-function Layout({ children }) {
+import { Outlet } from 'react-router-dom';
+import Header from '../partials/header/Header';
+import Footer from '../partials/footer/Footer';
+const Layout = () => {
     return (
-       <div> layout </div>
+        <>
+            <Header />
+            <Outlet />
+            <Footer />
+        </>
+
     )
 }
 

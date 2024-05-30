@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Card from "../../partials/card/card";
 import { useState } from "react";
-import About from "../about/about";
 const Body = () => {
     const [cardData, setCardData] = useState([]);
     const [count, setCount] = useState(0);
@@ -29,8 +28,6 @@ const Body = () => {
                 </div>
                 <button className="" type="button" onClick={() => { setCount(count + 1) }}>Count ++</button>
                 <p>Count: {count}</p>
-
-                <About></About>
         </>
     );
 }

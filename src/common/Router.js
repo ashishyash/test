@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import About from '../components/about/about';
 import Body  from "../components/body/body";
 import Layout from "./Layout";
+import Support from "../components/support/Support";
 const AppRouter = createBrowserRouter([
 
     {
@@ -12,7 +13,10 @@ const AppRouter = createBrowserRouter([
           },
           {
              path: '/about', element: <About/>
-          }
+          },
+          {
+            path: '/support', element: <Support/>
+         }
        ]
     },
     

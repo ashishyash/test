@@ -114,3 +114,27 @@ html,body{
 .wrapper{
   min-height: calc(100vh - 242px);
 }
+
+.mp-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+h1{
+  font-size: 2.2em;
+  padding: 1em 0;
+}
+h2{
+  font-size: 1.8em;
+  padding: 1em 0;
+}
+
+.mp-col-md-12 , .mp-col-lg-4{
+  padding: 0 .5em;
+}
+.about-us-content{
+  padding-bottom: 1em;
+}
+p{
+  padding: 0.5em 0;
+}

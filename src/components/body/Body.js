@@ -1,30 +1,19 @@
-import { useEffect } from "react";
 import Card from "../../partials/card/card";
-import { useState } from "react";
+import useFetch from "../../utility/useFetch";
 const Body = () => {
-    const [cardData, setCardData] = useState([]);
-    const [count, setCount] = useState(0);
-    const fetchApiData = async () => {
-        const data = await fetch('https://marketplace.bnymellon.com/public/mp/prod/externalapi.json');
-        const jsonData = await data.json();
-        setCardData(jsonData.data.apis)
-    }
-    useEffect(() => {
-        fetchApiData();
-    }, []);
+    const [data] = useFetch('https://marketplace.bnymellon.com/public/mp/prod/externalapi.json');
+    console.log(data);
     return (
-        <>
+        data ? <>
             <div className="searchbox">
                 <button type="button">Search</button>
             </div>
             <div className="card_parent">
                 {
-                    cardData.map((data) => ( <Card key={data.id} info={data} />))
+                    data?.data?.apis.map((cardData) => ( <Card key={cardData.id} info={cardData} />))
                 }
             </div>
-            <button className="" type="button" onClick={() => { setCount(count + 1) }}>Count ++</button>
-            <p>Count: {count}</p>
-        </>
-    );
+        </> : <div>loading</div>
+    ); 
 }
 export default Body;
